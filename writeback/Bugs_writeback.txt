@@ -1,0 +1,7 @@
+1). .xdc the reset button should be N17.
+2). .xdc removed pulldown line coz reset is active high.
+3). In top_fpga the stimulus_mem was defined with [0:18], it will take 18 inputs so it shoudl be [0:17] instead.
+4). addr should wrap at addr >= 17 instead of >= 18.
+5). In top_fpga we passed ~reset into wb, that probably will work because in wb its active low but still something to watch for.
+6). Added a check for output file opening or not error.
+7). Why is there negedge clk in line 144 test bench? 
