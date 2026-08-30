@@ -2,3 +2,4 @@
 2). top_module clock divider should wrap at counter == DIVIDER / 2 - 1 because it is supposed to be 1 HZ. (Nevermind it's a pulse)
 3). Some weird code for clock divider, corrected.
 4). If reset active high then pullup line removed from .xdc.
+5). 2.	In top_module.v in the clock_divider module the counter was declared as count_reg changed that to counter.
